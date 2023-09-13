@@ -1,2 +1,2 @@
 docker/mysql/storage/
-!.gitkeep
+.vscode

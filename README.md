@@ -1,3 +1,7 @@
+1. カレントディレクトリに.vscodeファイルを作成。<br>
+2. launch.jsonファイルを作成し下記を記載する。
+
+```
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
@@ -24,3 +28,35 @@
         }
     ]
 }
+```
+<br>
+
+
+3. docker/mysql配下にstorageフォルダを作成。
+
+<br>
+
+4. コンテナ作成。
+ ```
+docker-compose build
+``` 
+
+<br>
+
+5. dockerスタート
+```
+docker-compose up -d
+```
+
+<br>
+
+6. 下記のコマンドでコンテナに入る
+```
+docker-compose exec app bash
+```
+
+7.  プロジェクトをダウンロード。
+
+<br>
+
+8. http://localhost/public
