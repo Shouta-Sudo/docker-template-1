@@ -1,5 +1,31 @@
-1. カレントディレクトリに.vscodeファイルを作成。<br>
-2. launch.jsonファイルを作成し下記を記載する。
+1. docker/mysql配下にstorageフォルダを作成。
+
+
+2. コンテナ作成。
+ ```
+docker-compose build
+``` 
+
+
+3. dockerスタート
+```
+docker-compose up -d
+```
+
+
+4. 下記のコマンドでコンテナに入る
+```
+docker-compose exec app bash
+```
+
+5. cd src
+
+6.  git clone https://ShoutaSudou1117@bitbucket.org/apical-point-project/home-page-system.git .
+
+7. カレントディレクトリに.vscodeフォルダを作成。<br>
+
+
+8. launch.jsonファイルを作成し下記を記載する。
 
 ```
 {
@@ -29,34 +55,23 @@
     ]
 }
 ```
-<br>
-
-
-3. docker/mysql配下にstorageフォルダを作成。
-
-<br>
-
-4. コンテナ作成。
- ```
-docker-compose build
-``` 
-
-<br>
-
-5. dockerスタート
-```
-docker-compose up -d
-```
-
-<br>
-
-6. 下記のコマンドでコンテナに入る
-```
-docker-compose exec app bash
-```
-
-7.  プロジェクトをダウンロード。
-
-<br>
 
 8. http://localhost/public
+
+
+9. chmod -R 777 storage
+
+
+10. php artisan storage:link
+
+
+11. cp .env.example .env
+
+
+12. php artisan key:generate
+
+
+13. php artisan optimize
+
+
+14. php artisan migarte
