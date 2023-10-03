@@ -2,18 +2,21 @@
 
 
 2. コンテナ作成。
+
  ```
 docker-compose build
 ``` 
 
 
 3. dockerスタート
+
 ```
 docker-compose up -d
 ```
 
 
 4. 下記のコマンドでコンテナに入る
+
 ```
 docker-compose exec app bash
 ```
